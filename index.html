@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+</head>
+<style>
+    body{
+    width: 300px;
+    height: 200px;
+    margin: auto;
+    border: 2px solid rgb(31, 57, 36);
+    margin-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    }
+    h3{
+        font-size: 20px;
+        font-family: 'Courier New', Courier, monospace;
+        color: brown;
+        margin-top: 100px;
+    }
+    input{
+        background-color:rgb(227, 221, 221);
+        border-radius: 8px ;
+        border: 1px solid black;
+        padding: 5px 5px;
+    }
+    button{
+        background-color: rgb(192, 237, 124);
+        border-radius: 8px ;
+        border: 1px solid black;
+    }
+    p{
+        font-size: 15px;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+        color:rgb(244, 156, 48);
+        background-color: rgb(189, 245, 245);
+        width: 150px;
+        border-radius: 5px;
+    }
+</style>
+<body>
+    <center>
+        <h3>Enter a day of this week</h3>
+        <input type="text" id="id1" placeholder="enter day of a week"> <br><br>
+        <button onclick="funName()">Click here</button>
+        <p id="result"></p>
+    </center>
+</body>
+</html>
+<script>
+    function funName(){
+        let userInput = document.getElementById("id1").value;
+        switch(userInput){
+            case "Monday":
+                Results("This is Monday");
+                break;
+            case "Tuesday":
+                Results("This is Tuesday");
+                break;  
+            case "Wednesday":
+                Results("This is Wednesday");
+                break;  
+            case "Thursday":
+                Results("This is Thursday");
+                break; 
+            case "Friday":
+                Results("This is Friday");
+                break;
+            case "Saturday":
+                Results("This is Saturday");
+                break;
+            case "Sunday":
+                Results("This is Sunday");
+                break;
+            default:
+                Results("This is not a day. Example: Monday");   
+        }
+    }
+    function Results(output){
+        document.getElementById("result").innerHTML = output;
+    }
+</script>
